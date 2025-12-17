@@ -6,7 +6,7 @@ Day 1 bootstrap for Partner Hub monorepo powered by Nx. Partner and Courier hubs
 - `apps/partner-api` — NestJS API served under `/api/partner`
 - `apps/partner-web` — Partner web SPA (Vite)
 - `apps/courier-web` — Courier web SPA (Vite)
-- `apps/public-web` — placeholder for future Next.js storefront (will be implemented on Day 2)
+- `apps/public-web` — Next.js storefront with marketing pages and public shops (SSR)
 
 ## Packages
 - `packages/shared-auth`
@@ -32,6 +32,8 @@ Health check URL: `http://localhost:3001/api/partner/health`
 Frontends (when proxied through nginx/docker):
 - Partner: `http://localhost/partner/`
 - Courier: `http://localhost/courier/`
+- Marketing: `http://localhost/`
+- Shop example: `http://localhost/shops/atools`
 
 ### Docker workflow
 Build and start the stack:
@@ -49,6 +51,5 @@ npm run docker:down
 Exposed endpoints via nginx:
 - Partner web: http://localhost/partner/
 - Courier web: http://localhost/courier/
+- Public web: http://localhost/ (shops under `/shops/:slug`)
 - Partner API health: http://localhost/api/partner/health
-
-> Note: apps/public-web is reserved for a future Next.js storefront.

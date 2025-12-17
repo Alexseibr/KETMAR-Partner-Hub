@@ -48,6 +48,19 @@ services:
     ports:
       - "5174:5174"
 
+  public-web:
+    build:
+      context: .
+      dockerfile: apps/public-web/Dockerfile
+    container_name: public-web
+    environment:
+      - PORT=3002
+      - PUBLIC_API_BASE=http://partner-api:3001
+    depends_on:
+      - partner-api
+    ports:
+      - "3002:3002"
+
   nginx:
     image: nginx:1.27-alpine
     container_name: nginx-router
@@ -55,6 +68,7 @@ services:
       - partner-api
       - partner-web
       - courier-web
+      - public-web
     ports:
       - "80:80"
     volumes:
