@@ -1,0 +1,32 @@
+{
+  "name": "partner-api",
+  "root": "apps/partner-api",
+  "sourceRoot": "apps/partner-api/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "ts-node-dev --respawn --transpile-only apps/partner-api/src/main.ts"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc -p apps/partner-api/tsconfig.json"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo lint partner-api"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo test partner-api"
+      }
+    }
+  }
+}

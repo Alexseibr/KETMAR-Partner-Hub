@@ -1,0 +1,32 @@
+{
+  "name": "partner-web",
+  "root": "apps/partner-web",
+  "sourceRoot": "apps/partner-web/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cd apps/partner-web && vite --host 0.0.0.0 --port 5173"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cd apps/partner-web && vite build"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo lint partner-web"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo test partner-web"
+      }
+    }
+  }
+}

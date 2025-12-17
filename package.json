@@ -1,0 +1,39 @@
+{
+  "name": "ketmar-partner-hub",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nx run-many -t serve --all --parallel",
+    "start:partner-api": "nx run partner-api:serve",
+    "start:partner-web": "nx run partner-web:serve",
+    "start:courier-web": "nx run courier-web:serve",
+    "docker:up": "docker compose up --build",
+    "docker:down": "docker compose down",
+    "lint": "nx run-many -t lint --all",
+    "test": "nx run-many -t test --all"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/mongoose": "^10.0.0",
+    "@nestjs/platform-express": "^10.0.0",
+    "mongoose": "^8.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "reflect-metadata": "^0.2.0",
+    "rxjs": "^7.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "eslint": "^8.56.0",
+    "nx": "^18.3.0",
+    "prettier": "^3.2.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.0",
+    "vite": "^5.2.0"
+  }
+}

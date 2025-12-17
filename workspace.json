@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "projects": {
+    "partner-api": "apps/partner-api",
+    "partner-web": "apps/partner-web",
+    "courier-web": "apps/courier-web"
+  }
+}

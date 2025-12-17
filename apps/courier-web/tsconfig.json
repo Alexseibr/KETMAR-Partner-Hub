@@ -1,0 +1,8 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "outDir": "../../dist/apps/courier-web"
+  },
+  "include": ["src/**/*", "vite.config.ts", "index.html"]
+}

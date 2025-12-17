@@ -1,0 +1,32 @@
+{
+  "name": "courier-web",
+  "root": "apps/courier-web",
+  "sourceRoot": "apps/courier-web/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cd apps/courier-web && vite --host 0.0.0.0 --port 5174"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cd apps/courier-web && vite build"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo lint courier-web"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo test courier-web"
+      }
+    }
+  }
+}

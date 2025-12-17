@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2020",
+    "lib": ["es2020", "dom"],
+    "types": ["node"],
+    "moduleResolution": "node",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@ketmar/shared-auth": ["packages/shared-auth/src/index.ts"],
+      "@ketmar/shared-types": ["packages/shared-types/src/index.ts"],
+      "@ketmar/shared-config": ["packages/shared-config/src/index.ts"]
+    },
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "sourceMap": true
+  },
+  "include": ["apps/**/*", "packages/**/*"],
+  "exclude": ["node_modules", "tmp"]
+}
