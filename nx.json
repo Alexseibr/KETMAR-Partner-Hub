@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/nx",
+  "npmScope": "ketmar",
+  "affected": {
+    "defaultBase": "main"
+  },
+  "workspaceLayout": {
+    "appsDir": "apps",
+    "libsDir": "packages"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test"],
+        "parallel": 3
+      }
+    }
+  },
+  "generators": {},
+  "targetDefaults": {}
+}
