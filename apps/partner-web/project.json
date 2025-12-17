@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/nx-project",
+  "name": "partner-web",
+  "sourceRoot": "apps/partner-web/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "options": {
+        "configFile": "apps/partner-web/vite.config.ts"
+      }
+    },
+    "build": {
+      "executor": "@nx/vite:build",
+      "options": {
+        "configFile": "apps/partner-web/vite.config.ts",
+        "outputPath": "dist/apps/partner-web"
+      }
+    }
+  },
+  "tags": []
+}

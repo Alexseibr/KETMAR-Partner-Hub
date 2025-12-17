@@ -1,0 +1,42 @@
+{
+  "name": "ketmar-partner-hub",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "nx run-many --parallel --targets=serve --projects=partner-api,partner-web,courier-web",
+    "lint": "nx format:check",
+    "test": "echo 'tests pending'",
+    "docker:up": "docker compose up -d --build",
+    "docker:down": "docker compose down",
+    "start:partner-api": "ts-node --transpile-only apps/partner-api/src/main.ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.0.0",
+    "@nestjs/core": "^11.0.0",
+    "@nestjs/mongoose": "^11.0.0",
+    "@nestjs/platform-express": "^11.0.0",
+    "@nx/nest": "^19.8.0",
+    "@nx/node": "^19.8.0",
+    "@nx/react": "^19.8.0",
+    "@nx/vite": "^19.8.0",
+    "mongoose": "^8.8.0",
+    "nx": "^19.8.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "vite": "^6.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.3"
+  }
+}

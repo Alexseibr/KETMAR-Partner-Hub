@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/nx-project",
+  "name": "partner-api",
+  "sourceRoot": "apps/partner-api/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/node:node",
+      "options": {
+        "buildTarget": "partner-api:build"
+      }
+    },
+    "build": {
+      "executor": "@nx/node:build",
+      "options": {
+        "outputPath": "dist/apps/partner-api",
+        "main": "apps/partner-api/src/main.ts",
+        "tsConfig": "apps/partner-api/tsconfig.json",
+        "assets": []
+      }
+    }
+  },
+  "tags": []
+}
