@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/nx-project",
+  "name": "public-web",
+  "sourceRoot": "apps/public-web",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/workspace:run-commands",
+      "options": {
+        "command": "cd apps/public-web && next build"
+      }
+    },
+    "start": {
+      "executor": "@nx/workspace:run-commands",
+      "options": {
+        "command": "cd apps/public-web && next start -H 0.0.0.0 -p 3002"
+      }
+    },
+    "serve": {
+      "executor": "@nx/workspace:run-commands",
+      "options": {
+        "command": "cd apps/public-web && next dev -H 0.0.0.0 -p 3002"
+      }
+    }
+  },
+  "tags": []
+}

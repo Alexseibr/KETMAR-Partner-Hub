@@ -12,7 +12,9 @@
     "test": "echo 'tests pending'",
     "docker:up": "docker compose up -d --build",
     "docker:down": "docker compose down",
-    "start:partner-api": "ts-node --transpile-only apps/partner-api/src/main.ts"
+    "start:partner-api": "ts-node --transpile-only apps/partner-api/src/main.ts",
+    "public-web:build": "nx run public-web:build",
+    "public-web:start": "nx run public-web:start"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.0",
@@ -23,6 +25,7 @@
     "@nx/node": "^19.8.0",
     "@nx/react": "^19.8.0",
     "@nx/vite": "^19.8.0",
+    "next": "^14.2.14",
     "mongoose": "^8.8.0",
     "nx": "^19.8.0",
     "react": "^18.3.1",
